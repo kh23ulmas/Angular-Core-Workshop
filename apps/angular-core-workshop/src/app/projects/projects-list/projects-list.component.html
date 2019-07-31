@@ -1,0 +1,23 @@
+<mat-card role="region" tabindex="-1">
+    <mat-card-header>
+            <mat-card-title>
+              <h1>Projects</h1>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-list>
+              <mat-list-item  *ngFor="let item of projects" (click)="selected.emit(item)" > 
+                <h3 mat-line [style.color]='primaryColor'>
+                  {{item.name}}
+                </h3>
+                <br/>
+                <p mat-line>
+                  {{item.details}}
+                </p>
+                <button mat-icon-button (click)="deleted.emit(item)" >
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+</mat-card>

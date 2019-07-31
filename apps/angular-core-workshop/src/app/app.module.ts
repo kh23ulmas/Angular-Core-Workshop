@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 // tslint:disable-next-line: nx-enforce-module-boundaries
 import { UiLoginModule } from 'libs/ui-login/src/lib/ui-login.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule, 
     UiLoginModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   exports:[ CustomersModule],
   providers: [],
