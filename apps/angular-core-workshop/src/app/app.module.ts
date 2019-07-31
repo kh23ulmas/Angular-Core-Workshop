@@ -4,21 +4,20 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeModule } from './home/home.module';
-import { ProjectsModule } from './projects/projects.module';
 import { CustomersModule } from './customers/customers.module';
 import { AppRoutingModule } from './app-routing.module';
+// tslint:disable-next-line: nx-enforce-module-boundaries
 import { UiLoginModule } from 'libs/ui-login/src/lib/ui-login.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, 
     BrowserAnimationsModule, 
-    HomeModule, MaterialModule, 
-    ProjectsModule, 
-    CustomersModule,
-    AppRoutingModule,
-    UiLoginModule
+    MaterialModule, 
+    UiLoginModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   exports:[ CustomersModule],
   providers: [],

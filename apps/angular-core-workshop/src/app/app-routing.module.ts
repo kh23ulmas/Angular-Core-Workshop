@@ -4,8 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from 'libs/ui-login/src/lib/login/login.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full'}
+  
+  { path: '', loadChildren: './home/home.module#HomeModule' },
+  { path: 'projects', loadChildren: './projects/projects.module#ProjectsModule' },
+  { path: 'customers', loadChildren: './customers/customers.module#CustomersModule' },
+  { path: 'login', component: LoginComponent },
+  // { path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({
